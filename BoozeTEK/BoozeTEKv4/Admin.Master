@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="BoozeTEKv4.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>BoozeTEK</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" href="Content/bootstrap.css" rel="stylesheet" />
+    <link type="text/css" href="Content/BSoverride.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.js" type="text/javascript"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <div class="row">
+
+
+                <div class="col-lg-12">
+
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <asp:ImageButton ID="BoozeTEKlogo" runat="server" ImageUrl="~/Images/boozeTEKlogoAdmin.png" class="img-responsive" />
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                            </div>
+                            <%--close navbar header--%>
+
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" style="text-align: center">
+
+                                <asp:HyperLink ID="AdminHome" runat="server" NavigateUrl="~/Admin/AdminHome">Admin Home</asp:HyperLink>
+                                &nbsp; &nbsp; &nbsp; 
+                               <asp:HyperLink ID="Drinks" runat="server" NavigateUrl="~/Admin/Drinks">Drinks</asp:HyperLink>
+                                &nbsp; &nbsp; &nbsp;
+                               <asp:HyperLink ID="Drink" runat="server" NavigateUrl="~/Admin/Drink">Drink</asp:HyperLink>
+                                &nbsp; &nbsp; &nbsp;
+                               <asp:HyperLink ID="Ingredients" runat="server" NavigateUrl="~/Admin/Ingredients">Ingredients</asp:HyperLink>
+                                &nbsp; &nbsp; &nbsp;
+                               <asp:HyperLink ID="Ingredient" runat="server" NavigateUrl="~/Admin/Ingredient">Ingredient</asp:HyperLink>
+                                &nbsp; &nbsp; &nbsp;
+                               <asp:HyperLink ID="MixTables" runat="server" NavigateUrl="~/Admin/MixTables">Mix Tables</asp:HyperLink>
+                                &nbsp; &nbsp; &nbsp;
+                               <asp:HyperLink ID="Users" runat="server" NavigateUrl="~/Admin/Users">Users</asp:HyperLink>
+                                &nbsp; &nbsp; &nbsp;
+                               <asp:HyperLink ID="User" runat="server" NavigateUrl="~/Admin/User">User</asp:HyperLink>
+                                &nbsp; &nbsp; &nbsp;
+                               <asp:HyperLink ID="VirtualBars" runat="server" NavigateUrl="~/Admin/VirtualBars">Virtual Bars</asp:HyperLink>
+                                <asp:LinkButton ID="lbtnLogOut" runat="server" CssClass="btn btn-default" CausesValidation="false" OnClick="lbtnLogOut_Click" Style="float: right">Log Out</asp:LinkButton>
+                                <br />
+                                <br />
+                                <h2>
+                                    <asp:Label ID="lblGreeting" runat="server"></asp:Label></h2>
+
+
+                            </div>
+                            <%--closing navbar--%>
+                        </div>
+                        <%--closing div container fluid--%>
+                    </nav>
+                    <%--close navbar inverse--%>
+
+
+                    <%--                   <asp:Label ID="lblGreeting" runat="server"></asp:Label>--%>
+
+                    <asp:ContentPlaceHolder ID="BoozeTEKMain" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+
